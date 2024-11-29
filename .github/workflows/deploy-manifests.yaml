@@ -5,13 +5,13 @@ on:
     branches:
       - master
     paths:
-      - 'infra/**'
+      - "infra/**"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: digitalocean/action-doctl@v2
         with:
           token: ${{secrets.DIGITALOSEAN_ACCESS_TOKEN}}
